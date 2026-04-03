@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Lista from './Lista';
 
 function App() {
+        const soldados = [
+        {id: 1, nome: 'DAVI', cargo: 'COMADANTE'},
+        {id: 2, nome: 'DAVID', cargo: 'CABO'},
+        {id: 3, nome: 'DAIVUD', cargo: 'TENENTE'}
+      ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Lista soldados={soldados}/>
+      <h1>ForTheEmperror</h1>
     </div>
   );
 }
