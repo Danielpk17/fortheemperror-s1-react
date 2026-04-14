@@ -1,4 +1,6 @@
-function Cartao ({nome, cargo, id, status}) {
+import Botao from "./Botao";
+
+function Cartao ({nome, cargo, id, status, onSelecionar}) {
     return (
         <div>
             <h2>{cargo}</h2>
@@ -7,6 +9,7 @@ function Cartao ({nome, cargo, id, status}) {
             {status === "ATIVO" ? <h3 style={{color: 'green'}}>ATIVO</h3> : null}
             {status === "FERIDO" ? <h3 style={{color: 'yellow'}} >FERIDO</h3> : null}
             {status === "MORTO" ? <h3 style={{color: 'red'}}>MORTO</h3> : null}
+            <Botao onClick={onSelecionar} nome={nome}/>
         </div>
     );
 }
